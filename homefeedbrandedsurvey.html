@@ -1,0 +1,524 @@
+<!-- 
+  Sponsored surveys instant mockups for Bunz
+  Created by: Alisa Lin
+  Date: July 2019
+  Created using: Anima
+  Thanks for the Sketch files Eythan 
+
+  To whoever sees this in the future: 
+    this is very redundant and difficult to read, sorry. 
+    I blame Anima (and my complete lack of HTML/CSS/Javascript experience). 
+    Also, ID attributes are duplicated, so this is not valid HTML. Oops.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/homeFeedBrandedSurvey.css" rel="stylesheet" type="text/css"/>
+        </meta>
+    </head>
+    <body style="margin: 0; background: rgba(255, 255, 255, 1.0);">
+        <!-- <input id="anPageName" name="page" type="hidden" value="brandedsurvey"/> -->
+        <!-- Home Feed -->
+        <div class="inputfield">
+          <form>
+            <label>Business name: </label><input id="businessnameinput" onkeyup="updateBusinessName()" autocomplete="off"/><br>
+            <label>Logo: </label><input type="file" id="logoinput" onchange="updateLogo()"/><br>
+            <label>Primary colour: </label><input type="color" value="#78c3fa" id="primarycolourinput" onchange="updatePrimaryColour()"/><br>
+            <label>Secondary colour: </label><input type="color" value="#fdc324" id="secondarycolourinput" onchange="updateSecondaryColour()"/><br>
+            <label>Header image: </label><input type="file" id="headerinput" onchange="updateHeader()"/><br>
+            <label>CTA button text: </label><input id="ctaText" onkeyup="updateCTAText()" autocomplete="off"/><br> <!-- TODO -->
+            <label>Promo card title: </label><input id="promoTitle" onkeyup="updatepromoTitle()" autocomplete="off"/><br> <!-- TODO -->
+            <label>Promo card text: </label><textarea id="promoText" onkeyup="updatePromoText()" autocomplete="off" rows="4" cols="65"></textarea><br> <!-- TODO -->
+            <label>Promo code: </label><input id="promoCode" onkeyup="updatePromoCode()" autocomplete="off"/><br> <!-- TODO -->
+            <label>Survey question: </label><input id="surveyQuestion" onkeyup="updateSurveyQuestion()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+            <label>BTZ payout: </label><input id="btzPayout" onkeyup="updateBTZPayout()" autocomplete="off" style="width: 20px"/><br> 
+            <label>Survey answer 1: </label><input id="answer1" onkeyup="updateAnswer1()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+            <label>Survey answer 2: </label><input id="answer2" onkeyup="updateAnswer2()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+            <label>Survey answer 3: </label><input id="answer3" onkeyup="updateAnswer3()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+            <label>Survey answer 4: </label><input id="answer4" onkeyup="updateAnswer4()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+          </form>
+        </div>
+        <div class="brandedsurvey">
+            <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                <div class="recentpost">
+                    <div class="cardspostbtz">
+                        <img src="./img/home-feed-branded-survey-image.jpg" class="image"/>
+                        <div class="posttitle">
+                            Green Sweater
+                        </div>
+                        <div class="wasagiftbutdoesn">
+                            Was a gift but doesn't fit me well. Size S but should als…
+                        </div>
+                        <div class="price">
+                            <img src="./img/home-feed-branded-survey-bg-1@2x.png" class="bg"/>
+                            <div class="a500">
+                                500
+                            </div>
+                            <img src="./img/home-feed-branded-survey-oval-3-1@2x.png" class="oval3"/>
+                        </div>
+                    </div>
+                    <div class="cardspostbtz1">
+                        <img src="./img/home-feed-branded-survey-image-1.jpg" class="image" />
+                        <div class="posttitle">
+                            Adidas NMDs size 8
+                        </div>
+                        <div class="shortdescriptionab">
+                            Short description about the post and stuff…
+                        </div>
+                    </div>
+                    <div class="cardspostbtz2">
+                        <img src="./img/home-feed-branded-survey-image-2.jpg" class="image" />
+                        <div class="posttitle">
+                            Lots Of Nail Polish
+                        </div>
+                        <div class="havealotofextra">
+                            Have a lot of extra of these! Message me for more colo…
+                        </div>
+                        <div class="price">
+                            <img src="./img/home-feed-branded-survey-bg-1@2x.png" class="bg" />
+                            <div class="a500">
+                                200
+                            </div>
+                            <img src="./img/home-feed-branded-survey-oval-3-1@2x.png" class="oval3" />
+                        </div>
+                    </div>
+                    <div class="cardspostbtz3">
+                        <img src="./img/home-feed-branded-survey-image-3.jpg" class="image" />
+                        <div class="posttitle">
+                            MCM Chair
+                        </div>
+                        <div class="shortdescriptionab">
+                            Short description about the post and stuff…
+                        </div>
+                    </div>
+                    <div class="titlessectiontitleseeall">
+                        <div class="title">
+                            Trending Posts
+                        </div>
+                        <div class="rectangle">
+                        </div>
+                        <div class="action">
+                            See All
+                        </div>
+                    </div>
+                    <div class="divider">
+                    </div>
+                </div>
+                <div class="header">
+                    <div class="bg">
+                    </div>
+                    <div class="title">
+                        Explore
+                    </div>
+                    <img src="./img/home-feed-branded-survey-oval-8@2x.png" class="oval8" />
+                    <img src="./img/home-feed-branded-survey-icon--bell.png" class="iconbell" />
+                    <img src="./img/home-feed-branded-survey-marker@2x.png" class="marker" />
+                    <div class="barsstatusbariphonexonlight">
+                        <div class="battery">
+                            <div class="border">
+                            </div>
+                            <img src="./img/home-feed-branded-survey-cap@2x.png" class="cap" />
+                            <div class="capacity">
+                            </div>
+                        </div>
+                        <img src="./img/home-feed-branded-survey-wifi@2x.png" class="wifi" />
+                        <img src="./img/home-feed-branded-survey-cellular-connection@2x.png" class="cellularconnection" />
+                        <div class="timestyle">
+                            <div class="u21b3time">
+                                9:41
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomnavtabbar">
+                    <img src="./img/home-feed-branded-survey-tab-bg.png" class="tabbg" />
+                    <div class="tabbarcommunities">
+                        <img src="./img/home-feed-branded-survey-icon@2x.png" class="icon" />
+                    </div>
+                    <div class="tabbarsearch">
+                        <img src="./img/home-feed-branded-survey-icon-1@2x.png" class="icon" />
+                    </div>
+                    <div class="tabbarhome">
+                        <img src="./img/home-feed-branded-survey-icon-2@2x.png" class="icon" />
+                    </div>
+                    <div class="tabbarmail">
+                        <img src="./img/home-feed-branded-survey-icon-3@2x.png" class="icon" />
+                        <div class="modifiersmarker">
+                            <img src="./img/home-feed-branded-survey-marker@2x.png" class="marker" />
+                        </div>
+                    </div>
+                    <div class="tabbarwallet">
+                        <img src="./img/home-feed-branded-survey-icon-4@2x.png" class="icon" />
+                    </div>
+                </div>
+                <div class="notouchy">
+                </div>
+                <div class="clicktoedit">
+                    <div class="banner">
+                        <div class="mask">
+                        </div>
+                        <img src="" id="header-banner" class="brandbg1" />
+                    </div>
+                    <div class="earnbtz">
+                        <img src="./img/home-feed-branded-survey-bg-2@2x.png" class="bg1" />
+                        <svg>
+                          <filter id="blur">
+                            <feGaussianBlur stdDeviation="5" />
+                          </filter>
+                        </svg>
+                        <div class="earnbtz1">
+                            Earn 15 BTZ
+                        </div>
+                    </div>
+                    <div class="brands">
+                        <img src="" class="brands1" />
+                    </div>
+                    <div class="subtitle">
+                        Sponsored BTZ Drop
+                    </div>
+                    <div class="shopname" id="businessName">
+                        Boozer
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Home Feed -->
+        <!-- Survey Questions -->
+        <div class="brandedsurvey">
+            <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                <img src="" id="header-banner" class="brandbg"/>
+                <img src="./img/branded-survey-blur.png" class="blur"/>
+                <div class="surveycard">
+                    <img src="./img/branded-survey-card-bg.png" class="cardbg" />
+                    <div class="companyname" id="businessName">
+                        Boozer<br />
+                    </div>
+                    <div class="disclaimer">
+                        This survey is sponsored by:
+                    </div>
+                    <div class="a4answer">
+                        <img src="./img/branded-survey-cell.png" class="cell" />
+                        <div class="selection">
+                            <img src="./img/branded-survey-empty-selection-1@2x.png" class="emptyselection" />
+                        </div>
+                        <div class="response4">
+                            Treatment of marginalized groups
+                        </div>
+                    </div>
+                    <div class="a3answer">
+                        <img src="./img/branded-survey-cell.png" class="cell" />
+                        <div class="selection">
+                            <img src="./img/branded-survey-empty-selection-1@2x.png" class="emptyselection" />
+                        </div>
+                        <div class="response3">
+                            Climate Change
+                        </div>
+                    </div>
+                    <div class="a2answer">
+                        <img src="./img/branded-survey-cell.png" class="cell" />
+                        <div class="check">
+                            <img src="./img/branded-survey-check@2x.png" class="check1" style="background-color:#78c3fa" id="primcolor"/>
+                        </div>
+                        <div class="response2">
+                            Accessibility
+                        </div>
+                    </div>
+                    <div class="a1answer">
+                        <img src="./img/branded-survey-cell.png" class="cell" />
+                        <div class="response1">
+                            Housing and homelessness
+                        </div>
+                        <div class="selection">
+                            <img src="./img/branded-survey-empty-selection-1@2x.png" class="emptyselection" />
+                        </div>
+                    </div>
+                    <div class="questiontwolinemax">
+                        Which of the following social issues concerns you the most?
+                    </div>
+                    <div class="banner1">
+                        <img src="./img/conversation-survey-no-touchy.png" class="notouchy" />
+                        <div class="editthesymbol">
+                            <div class="bg">
+                                <div class="mask">
+                                </div>
+                                <img src="" id="header-banner" class="brandbg1" />
+                            </div>
+                            <div class="earnbtz">
+                                <img src="./img/home-feed-branded-survey-bg-2@2x.png" class="bg1" />
+                                <div class="earnbtz1">
+                                    Earn 15 BTZ
+                                </div>
+                            </div>
+                            <div class="brands">
+                                <img src="" class="brands1"/>
+                            </div>
+                            <div class="subtitle">
+                                Sponsored BTZ Drop
+                            </div>
+                            <div class="shopname" id="businessName">
+                                Boozer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <img src="./img/branded-survey-logo@2x.png" class="logo" /> -->
+                <!-- <div class="bitmap">
+                    <img src="./img/branded-survey-bitmap@2x.png" class="bitmap1" />
+                </div> -->
+                <div class="standardbutton">
+                    <div class="colormask">
+                        <div class="primarycolor">
+                            <div class="color" style="background-color:#78c3fa" id="primcolor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta">
+                        Submit Response
+                    </div>
+                </div>
+                <div class="topbar">
+                    <div class="cell">
+                    </div>
+                    <img src="./img/branded-survey-settings@2x.png" class="settings"/>
+                </div>
+            </div>
+        </div>
+        <!-- End of Survey Questions -->
+        <!-- Results -->
+        <div class="conversationsurvey">
+          <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+              <img src="" id="header-banner" class="brandbg" />
+              <img src="./img/branded-survey-blur.png" class="blur" />
+              <div class="surveycardresults">
+                  <img src="./img/conversation-survey-card-bg.png" class="cardbg"/>
+                  <div class="companyname" id="businessName">
+                      Boozer
+                  </div>
+                  <div class="disclaimer">
+                      This survey is sponsored by:
+                  </div>
+                  <div class="questiontwolinemax">
+                      Which of the following social issues concerns you the most?
+                  </div>
+                  <div class="banner2">
+                      <img src="./img/conversation-survey-no-touchy.png" class="notouchy" />
+                      <div class="editthesymbol">
+                          <div class="bg">
+                              <div class="mask">
+                              </div>
+                              <img src="" id="header-banner" class="brandbg1" />
+                          </div>
+                          <div class="earnbtz">
+                              <img src="./img/home-feed-branded-survey-bg-2@2x.png" class="bg1" />
+                              <div class="earnbtz1">
+                                  Earn 15 BTZ
+                              </div>
+                          </div>
+                          <div class="brands">
+                              <img src="" class="brands1" />
+                          </div>
+                          <div class="subtitle">
+                              Sponsored BTZ Drop
+                          </div>
+                          <div class="shopname" id="businessName">
+                              Boozer
+                          </div>
+                      </div>
+                  </div>
+                  <div class="a4answer">
+                      <img src="./img/conversation-survey-cell.png" class="cell" />
+                      <div class="response4">
+                          Treatment of marginalized groups
+                      </div>
+                      <div class="a22">
+                          22%
+                      </div>
+                      <div class="responsebar">
+                          <div class="percentagebar">
+                          </div>
+                          <div class="secondarycolor">
+                              <div class="color" style="background-color:#fdc324" id="seccolor">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="a3answer">
+                      <img src="./img/conversation-survey-cell.png" class="cell" />
+                      <div class="response3">
+                          Climate Change
+                      </div>
+                      <div class="a11">
+                          11%
+                      </div>
+                      <div class="responsebar">
+                          <div class="percentagebar">
+                          </div>
+                          <div class="secondarycolor">
+                              <div class="color" style="background-color:#fdc324" id="seccolor">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="a2answer">
+                      <img src="./img/conversation-survey-cell.png" class="cell" />
+                      <div class="userbar">
+                          <div class="percentagebar">
+                          </div>
+                          <div class="primarycolor">
+                              <div class="color" style="background-color:#78c3fa" id="primcolor">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="response2">
+                          Accessibility
+                      </div>
+                      <div class="a44">
+                          44%
+                      </div>
+                  </div>
+                  <div class="a1answer">
+                      <img src="./img/conversation-survey-cell.png" class="cell" />
+                      <div class="response1">
+                          Housing and homelessness
+                      </div>
+                      <div class="responsebar">
+                          <div class="percentagebar">
+                          </div>
+                          <div class="secondarycolor">
+                              <div class="color" style="background-color:#fdc324" id="seccolor">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="a23">
+                          23%
+                      </div>
+                  </div>
+              </div>
+              <div class="linkout">
+                  <div class="colormask">
+                      <!-- <img src="./img/conversation-survey-mask.png" class="mask" /> -->
+                      <div class="primarycolor">
+                          <div class="color" style="background-color:#78c3fa" id="primcolor">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="linktext">
+                      Download Boozer, Get $10!
+                  </div>
+                  <div class="externallinkicon">
+                      <img src="./img/conversation-survey-external-link-icon@2x.png" class="externallinkicon1"/>
+                  </div>
+              </div>
+              <div class="moreinformation">
+                  <img src="./img/conversation-survey-mask-1.png" class="mask" />
+                  <div class="moreinformation1" id="promoTitle">
+                      Get $10
+                  </div>
+                  <div class="validfornewlyftu">
+                      Get $10 off your first order! Use promo code BUNZ at checkout.
+                  </div>
+                  <div class="lyftbunz">
+                      BUNZ
+                  </div>
+              </div>
+              <div class="topbar">
+                  <div class="cell">
+                  </div>
+                  <img src="./img/branded-survey-settings@2x.png" class="settings"/>
+              </div>
+          </div>
+      </div>
+        <!-- End of Results -->
+        <!-- Scripts -->
+        <script>
+
+          function updatePrimaryColour() {
+            var primaryColourInput = document.getElementById('primarycolourinput').value;
+            var primaryColourView = document.querySelectorAll('[id=primcolor]');
+
+            primaryColourView.forEach(element=> {
+              element.setAttribute('style', 'background-color: ' + primaryColourInput);
+            })
+          }
+
+          function updateSecondaryColour() {
+            var secondaryColourInput = document.getElementById('secondarycolourinput').value;
+            var secondaryColourView = document.querySelectorAll('[id=seccolor]');
+
+            secondaryColourView.forEach(element=> {
+              element.setAttribute('style', 'background-color: ' + secondaryColourInput);
+            });
+          }
+
+          function updateBusinessName() {
+            var nameLayout = document.querySelectorAll('[id=businessName]');
+            var businessName = document.getElementById('businessnameinput').value;
+
+            nameLayout.forEach(element=> {
+              element.innerHTML = businessName;
+            })
+          }
+
+          function updateBTZPayout() {
+            var earnBtz = document.getElementsByClassName("earnbtz1");
+            var btzPayout = document.getElementById('btzPayout').value;
+
+            for (let element of earnBtz) {
+              element.innerHTML = "Earn " + btzPayout + " BTZ";
+            }
+          }
+
+          function updateLogo() {
+            var views = document.getElementsByClassName("brands1");
+            // console.log('logo areas: ' + views);
+            var upload = document.getElementById('logoinput').files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function() {
+              for (let element of views) {
+                element.src = reader.result;
+              }
+            }
+
+            if (upload) {
+              reader.readAsDataURL(upload);
+            } else {
+              for (let element of views) {
+                element.src = "./img/branded-survey-brands@2x.png";
+              }
+            }
+          }
+          
+
+          function updateHeader(){
+            var banner   = document.querySelectorAll('[id=header-banner]');
+            // console.log('header areas: ' + banner);
+            var file     = document.getElementById('headerinput').files[0]; //sames as here
+            var reader   = new FileReader();
+
+            reader.onloadend = function () {
+                banner.forEach(element=> {
+                  element.src = reader.result;
+                });
+            }
+
+            if (file) {
+                reader.readAsDataURL(file); //reads the data as a URL
+            } else {
+                banner.forEach(element=> {
+                  element.src = "./img/branded-survey-brand-bg.png";
+                });
+            }
+          }
+
+          updateLogo();
+          updateHeader();  // calls the function named updateHeader()
+          // updateLogo();
+        </script>
+        <!-- End of Scripts -->
+    </body>
+</html>
