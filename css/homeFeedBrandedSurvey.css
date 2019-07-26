@@ -2581,9 +2581,9 @@ div {
 .conversationsurvey .moreinformation {
   background-color    : rgba(255,255,255,0.0);
   top                 : 698px;
-  height              : 135px;
+  min-height          : 135px;
   width               : 335px;
-  position            : absolute;
+  position            : relative;
   margin              : 0;
   left                : 20px;
   -ms-transform       : rotate(0deg); /* IE 9 */
@@ -2606,7 +2606,7 @@ div {
   background-color    : rgba(255,255,255,0.0);
   top                 : 20px;
   height              : auto;
-  width               : auto;
+  width               : 315px;
   position            : absolute;
   margin              : 0;
   left                : 20px;
@@ -2618,12 +2618,13 @@ div {
   color               : rgba(0, 0, 0, 1.0);
   text-align          : left;
   line-height         : 18.0px;
+  /* margin-bottom       : 3px; TODO figure this out */
 }
-.conversationsurvey .moreinformation .validfornewlyftu {
+.conversationsurvey .moreinformation .promodescription {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 48px;
+  /* top                 : 48px; */
   height              : auto;
-  width               : 295px;
+  width               : 315px;
   position            : absolute;
   margin              : 0;
   left                : 20px;
@@ -2636,9 +2637,9 @@ div {
   text-align          : left;
   line-height         : 19.0px;
 }
-.conversationsurvey .moreinformation .lyftbunz {
+.conversationsurvey .moreinformation .promocode {
   background-color    : rgba(255,255,255,0.0);
-  top                 : 96px;
+  /* top                 : 96px; */
   height              : auto;
   width               : auto;
   position            : absolute;

@@ -24,23 +24,29 @@
         <!-- <input id="anPageName" name="page" type="hidden" value="brandedsurvey"/> -->
         <!-- Home Feed -->
         <div class="inputfield">
-          <form>
-            <label>Business name: </label><input id="businessnameinput" onkeyup="updateBusinessName()" autocomplete="off"/><br>
-            <label>Logo: </label><input type="file" id="logoinput" onchange="updateLogo()"/><br>
-            <label>Primary colour: </label><input type="color" value="#78c3fa" id="primarycolourinput" onchange="updatePrimaryColour()"/><br>
-            <label>Secondary colour: </label><input type="color" value="#fdc324" id="secondarycolourinput" onchange="updateSecondaryColour()"/><br>
-            <label>Header image: </label><input type="file" id="headerinput" onchange="updateHeader()"/><br>
-            <label>CTA button text: </label><input id="ctaText" onkeyup="updateCTAText()" autocomplete="off"/><br> <!-- TODO -->
-            <label>Promo card title: </label><input id="promoTitle" onkeyup="updatepromoTitle()" autocomplete="off"/><br> <!-- TODO -->
-            <label>Promo card text: </label><textarea id="promoText" onkeyup="updatePromoText()" autocomplete="off" rows="4" cols="65"></textarea><br> <!-- TODO -->
-            <label>Promo code: </label><input id="promoCode" onkeyup="updatePromoCode()" autocomplete="off"/><br> <!-- TODO -->
-            <label>Survey question: </label><input id="surveyQuestion" onkeyup="updateSurveyQuestion()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
-            <label>BTZ payout: </label><input id="btzPayout" onkeyup="updateBTZPayout()" autocomplete="off" style="width: 20px"/><br> 
-            <label>Survey answer 1: </label><input id="answer1" onkeyup="updateAnswer1()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
-            <label>Survey answer 2: </label><input id="answer2" onkeyup="updateAnswer2()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
-            <label>Survey answer 3: </label><input id="answer3" onkeyup="updateAnswer3()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
-            <label>Survey answer 4: </label><input id="answer4" onkeyup="updateAnswer4()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
-          </form>
+          <div class="inputleft" style="width: 30%; float: left">
+            <form>
+                <label>Business name: </label><input id="businessnameinput" onkeyup="updateBusinessName()" autocomplete="off"/><br>
+                <label>Logo: </label><input type="file" id="logoinput" onchange="updateLogo()"/><br>
+                <label>Primary colour: </label><input type="color" value="#78c3fa" id="primarycolourinput" onchange="updatePrimaryColour()"/><br>
+                <label>Secondary colour: </label><input type="color" value="#fdc324" id="secondarycolourinput" onchange="updateSecondaryColour()"/><br>
+                <label>Header image: </label><input type="file" id="headerinput" onchange="updateHeader()"/><br>
+                <label>CTA button text: </label><input id="ctaText" onkeyup="updateCTAText()" autocomplete="off"/><br>
+                <label>Promo card title: </label><input id="promoTitleInput" onkeyup="updatePromoTitle()" autocomplete="off"/><br>
+                <label>Promo card text: </label><textarea id="promoText" onkeyup="updatePromoText()" autocomplete="off" rows="4" cols="65"></textarea><br>
+                <label>Promo code: </label><input id="promoCodeInput" onkeyup="updatePromoCode()" autocomplete="off"/><br>
+            </form>
+          </div>
+          <div class="inputright" style="width: 70%; float: right">
+              <form>
+                  <label>Survey question: </label><input id="surveyQuestion" onkeyup="updateSurveyQuestion()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+                  <label>BTZ payout: </label><input id="btzPayout" onkeyup="updateBTZPayout()" autocomplete="off" style="width: 20px"/><br> 
+                  <label>Survey answer 1: </label><input id="answer1" onkeyup="updateAnswer1()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+                  <label>Survey answer 2: </label><input id="answer2" onkeyup="updateAnswer2()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+                  <label>Survey answer 3: </label><input id="answer3" onkeyup="updateAnswer3()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+                  <label>Survey answer 4: </label><input id="answer4" onkeyup="updateAnswer4()" autocomplete="off" style="width: 400px"/><br> <!-- TODO -->
+                </form>
+          </div>
         </div>
         <div class="brandedsurvey">
             <div style="width: 375px; height: 100%; position:relative; margin:auto;">
@@ -418,10 +424,10 @@
                   <div class="moreinformation1" id="promoTitle">
                       Get $10
                   </div>
-                  <div class="validfornewlyftu">
+                  <div class="promodescription" id="promoDescription" style="top: 48px">
                       Get $10 off your first order! Use promo code BUNZ at checkout.
                   </div>
-                  <div class="lyftbunz">
+                  <div class="promocode" id="promoCode" style="top: 96px">
                       BUNZ
                   </div>
               </div>
@@ -472,9 +478,93 @@
             }
           }
 
+          function updateCTAText() {
+            var CTAview = document.getElementsByClassName("linktext");
+            var CTAtext = document.getElementById('ctaText').value;
+
+            for (let element of CTAview) {
+              element.innerHTML = CTAtext;
+            }
+          }
+
+          function updatePromoTitle() {
+            var promoTitleView = document.getElementById('promoTitle');
+            var promoTitleText = document.getElementById('promoTitleInput').value;
+            var promoDescription = document.getElementById('promoDescription');
+            var promoCode = document.getElementById('promoCode');
+            var descriptionHeight = 30 + promoTitleView.offsetHeight;
+            var codeHeight = descriptionHeight + 30;
+
+            promoTitleView.innerHTML = promoTitleText;
+            promoDescription.setAttribute('style', 'top: ' + descriptionHeight + 'px');
+            promoCode.setAttribute('style', 'top: ' + codeHeight + 'px');
+          }
+
+          function updatePromoText() {
+            var promoTextView = document.getElementById('promoDescription');
+            var promoTextInput = document.getElementById('promoText').value;
+            var promoTitle = document.getElementById('promoTitle');
+            var promoCode = document.getElementById('promoCode');
+            var codeHeight = promoTitle.offsetHeight + promoTextView.offsetHeight + 39;
+
+            promoTextView.innerHTML = promoTextInput;
+            promoCode.setAttribute('style', 'top: ' + codeHeight + 'px');
+          }
+
+          function updatePromoCode() {
+            var promoCodeView = document.getElementById('promoCode');
+            var promoCodeInput = document.getElementById('promoCodeInput').value;
+
+            promoCodeView.innerHTML = promoCodeInput;
+          }
+
+          function updateSurveyQuestion() {
+            var questionInput = document.getElementById('surveyQuestion').value;
+            var questionView = document.getElementsByClassName('questiontwolinemax');
+
+            for (let element of questionView) {
+              element.innerHTML = questionInput;
+            }
+          }
+
+          function updateAnswer1() {
+            var answerView = document.getElementsByClassName('response1');
+            var answerInput = document.getElementById('answer1').value;
+
+            for (let element of answerView) {
+              element.innerHTML = answerInput;
+            }
+          }
+
+          function updateAnswer2() {
+            var answerView = document.getElementsByClassName('response2');
+            var answerInput = document.getElementById('answer2').value;
+
+            for (let element of answerView) {
+              element.innerHTML = answerInput;
+            }
+          }
+
+          function updateAnswer3() {
+            var answerView = document.getElementsByClassName('response3');
+            var answerInput = document.getElementById('answer3').value;
+
+            for (let element of answerView) {
+              element.innerHTML = answerInput;
+            }
+          }
+
+          function updateAnswer4() {
+            var answerView = document.getElementsByClassName('response4');
+            var answerInput = document.getElementById('answer4').value;
+
+            for (let element of answerView) {
+              element.innerHTML = answerInput;
+            }
+          }
+
           function updateLogo() {
             var views = document.getElementsByClassName("brands1");
-            // console.log('logo areas: ' + views);
             var upload = document.getElementById('logoinput').files[0];
             var reader = new FileReader();
 
@@ -493,7 +583,6 @@
             }
           }
           
-
           function updateHeader(){
             var banner   = document.querySelectorAll('[id=header-banner]');
             // console.log('header areas: ' + banner);
@@ -517,7 +606,6 @@
 
           updateLogo();
           updateHeader();  // calls the function named updateHeader()
-          // updateLogo();
         </script>
         <!-- End of Scripts -->
     </body>
