@@ -493,7 +493,7 @@
             var promoDescription = document.getElementById('promoDescription');
             var promoCode = document.getElementById('promoCode');
             var descriptionHeight = 30 + promoTitleView.offsetHeight;
-            var codeHeight = descriptionHeight + 30;
+            var codeHeight = promoTitleView.offsetHeight + promoDescription.offsetHeight + 40;
 
             promoTitleView.innerHTML = promoTitleText;
             promoDescription.setAttribute('style', 'top: ' + descriptionHeight + 'px');
