@@ -3,7 +3,7 @@
 Create instant mockups of sponsored surveys.
 
 ## Access
-Hosted at https://alisa-lin.github.io/bunz-mockups.
+Hosted at http://surveymocks.bunz.com/.
 
 ## Usage
 Fill in all fields. To erase the default text/assets, you must enter something into the corresponding input field. For example, to have a promo card without a promo code, you must enter a space into the promo code text box to remove the default "BUNZ" promo code.
