@@ -12,7 +12,7 @@ Upon reload, all assets will reset to the default Boozer sponsored survey.
 
 ## Limitations
 * This will only work if the survey question is two lines and the survey answers are one line each
-* There is no option to disable a promo code
+* There is no option to disable a promo card
 * If the promo card runs off screen, it will run off screen. The text will resize but the screen will not extend to accomodate the lengthened promo card
 * If the BTZ amount is not two digits, the "Earn X BTZ" UI will look strange
 
